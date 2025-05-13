@@ -1,0 +1,240 @@
+*  {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    height: 100vh;
+    padding: 20px;
+}
+
+main{
+    
+     max-width: 510px; 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .user-input{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+
+       & label{
+        color: #505050;
+       } 
+       
+       & input{
+        padding: 14px 26px;
+        border-radius: 6px;
+        outline: none;
+        border: 2px solid #610ec0c9;
+        width: 100%;
+    }
+
+ }
+    & #btnCalcular{
+    background-color:#6d26bee8 ;
+    border-radius: 6px;
+    padding: 13px;
+    font-weight:bold ;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  & #btnCalcular:hover{
+    padding: 11px;
+    background-color: rgb(247, 247, 247) ;
+    color: #6d26bee8  ;
+    border:  2px solid #6d26bee8 ;
+  }
+}
+
+.res{
+    color: #ababab;
+    text-align: center;
+    
+    & p {
+     width:  254px;
+     margin: auto;
+
+    }
+
+    display: flex;
+    flex-direction: column;
+    
+    & div {
+    display:  flex;
+    color: #505050;
+    }
+
+    & div:first-child {
+    border-bottom:  #6d26bee8 2px solid ;
+    padding-bottom: 10px;
+    font-weight: 700;
+    }
+
+    & div:last-child {
+        padding-top: 10px;
+    }
+}
+
+.tabela {
+    display: flex;
+    width: px;
+   
+    border: #ffffff 1px solid;
+    
+
+    & .imc {
+       width: 250px;
+        & p:nth-child(odd){
+            background-color: #b4b2b2;
+        }
+       
+        & p:first-child{
+            color: blueviolet;
+            font-weight: 700;
+        }
+    }
+     
+    & .classificacao{
+        width: 250px;
+        & p:nth-child(odd){
+            background-color: #b1afaf;
+        }
+
+        & p:first-child{
+            color: blueviolet;
+            font-weight: 700;
+        }
+    }
+
+    & p{
+        padding:  5px;
+        width: 100%;
+        color: #4b4949;
+    }
+}    
+@media screen and (max-width: 768px) {
+    html {
+        height: 100vh;
+        font-size: 90%;
+    }
+
+    main {
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    & .res p {
+
+        width: 100%;
+    }
+
+    & .tabela {
+        
+        width: 100%;
+    }
+
+     &.tabela, .imc,
+    .tabela .classificacao {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500x) {
+    html {
+        font-size: 70%;
+        padding: 20px
+    }
+
+        & .main {
+            height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+        }
+        & .res p {
+            width: 100%;
+        }
+        & input,
+          button {
+            font-size: 1rem;
+        }
+
+        & .tabela {
+            
+            flex-direction: column;
+            width: 100%;
+        
+       
+        }
+
+        & .tabela, .imc,
+         .classificacao {
+            margin-right: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 60%;
+        padding: 30px;
+    }
+    & .main {
+        height: 100vh;
+        padding: 30px;
+        flex-direction: column;
+    }
+     & .res p {
+        width: 100%;
+    }
+
+    & input,
+    button {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    html {
+         
+        font-size: 50%;
+        padding: 10px
+    }
+
+        & .main {
+            
+            height: 100vh;
+            padding: 30px;
+            flex-direction: column;
+        }
+        & .res p {
+            width: 100%;
+        }
+        & input,
+          button {
+            font-size: 50%;
+        }
+
+        
+}
+
+
